@@ -2,22 +2,37 @@
     display: block;
     width: 100%;
     max-height: 560px;
-    border-radius: 16px;
+
+    border-radius: 18px;
     object-fit: cover;
     object-position: center;
+
+    box-shadow: var(--shadow-soft);
 }
 
 .ingredient-list {
-    padding-left: 20px;
+    padding: 0;
+    padding-left: 22px;
 }
 
 .ingredient-list li {
+    padding: 5px 0;
     margin-bottom: 7px;
+
+    color: var(--color-text);
+    line-height: 1.6;
     overflow-wrap: anywhere;
 }
 
+.ingredient-list li::marker {
+    color: var(--color-primary);
+}
+
 .recipe-instructions {
-    line-height: 1.8;
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.9;
+
     white-space: pre-line;
     overflow-wrap: anywhere;
 }
@@ -26,7 +41,44 @@
     min-width: 0;
 }
 
-/* Tablets */
+#recipeDetails .card {
+    margin-bottom: 25px;
+}
+
+#recipeDetails h1,
+#recipeDetails h2,
+#recipeDetails h3,
+#recipeDetails h4 {
+    color: var(--color-secondary);
+    font-weight: 750;
+}
+
+#recipeDetails h1 {
+    margin-bottom: 18px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    letter-spacing: -0.7px;
+}
+
+#recipeDetails h2 {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+#recipeDetails h3 {
+    margin-bottom: 13px;
+    font-size: 1.25rem;
+}
+
+#recipeDetails .alert {
+    border-radius: 12px;
+    line-height: 1.6;
+}
+
+#recipeDetails .alert-info {
+    color: #285A4B;
+    background-color: #EAF3EB;
+    border-color: #CFE2D1;
+}
 
 @media (max-width: 991.98px) {
 
@@ -36,16 +88,24 @@
 
 }
 
-/* Celulares */
-
 @media (max-width: 575.98px) {
 
     .recipe-detail-image {
         max-height: 320px;
+        border-radius: 13px;
     }
 
     .recipe-instructions {
+        font-size: 0.96rem;
         line-height: 1.7;
+    }
+
+    #recipeDetails h2 {
+        font-size: 1.35rem;
+    }
+
+    #recipeDetails h3 {
+        font-size: 1.15rem;
     }
 
 }

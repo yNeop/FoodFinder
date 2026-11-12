@@ -1,14 +1,9 @@
 import { buscarReceitaAleatoria } from "../services/mealdb.js";
-import { criarCardReceita } from "./recipes.js";
 
 export function inicializarRandom() {
     const botaoRandom = document.getElementById("randomRecipeButton");
-    const elementoReceitas = document.getElementById("featuredRecipes");
 
-    // Evita erros caso os elementos não existam na página
-    if (!botaoRandom || !elementoReceitas) {
-        return;
-    }
+    if (!botaoRandom) return;
 
     botaoRandom.addEventListener("click", async () => {
         const textoOriginal = botaoRandom.textContent;
@@ -16,40 +11,23 @@ export function inicializarRandom() {
         try {
             botaoRandom.disabled = true;
             botaoRandom.textContent = "Sorteando...";
-            elementoReceitas.innerHTML = `
-                <div class="col-12 text-center">
-                    <p>Buscando uma receita aleatória...</p>
-                </div>
-            `;
 
             const receita = await buscarReceitaAleatoria();
 
-            elementoReceitas.innerHTML = "";
-
             if (!receita) {
-                elementoReceitas.innerHTML = `
-                    <div class="col-12">
-                        <p class="alert alert-warning">
-                            Não foi possível encontrar uma receita.
-                        </p>
-                    </div>
-                `;
+                alert("Não foi possível encontrar uma receita.");
                 return;
             }
 
-            const card = criarCardReceita(receita);
-            elementoReceitas.appendChild(card);
+            window.location.href = new URL(
+                `pages/explore.html?random=${encodeURIComponent(receita.idMeal)}`,
+                window.location.href
+            ).href;
 
         } catch (erro) {
-            console.error("Erro ao buscar receita aleatória:", erro);
+            console.error("Erro ao sortear receita:", erro);
+            alert("Erro ao buscar receita aleatória. Tente novamente.");
 
-            elementoReceitas.innerHTML = `
-                <div class="col-12">
-                    <p class="alert alert-danger">
-                        Não foi possível carregar a receita. Tente novamente.
-                    </p>
-                </div>
-            `;
         } finally {
             botaoRandom.disabled = false;
             botaoRandom.textContent = textoOriginal;

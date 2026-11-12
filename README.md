@@ -82,7 +82,7 @@ A disponibilidade das receitas depende do funcionamento da API TheMealDB e de um
 
 **Carousel — Imagem 2:** [Pexels — User: mehmetakifarts](https://www.pexels.com/pt-br/foto/deliciosos-kebabs-turcos-com-legumes-grelhados-40135757/)
 
-**Carousel — Imagem 3:** [Pexels — User: mehmetakifarts](https://www.pexels.com/pt-br/foto/deliciosas-fajitas-de-carne-com-legumes-coloridos-40135787/)
+**Carousel — Imagem 3:** [Pexels — User: mehmetakifarts](https://www.pexels.com/pt-br/foto/prato-gourmet-de-frango-com-especiarias-e-bebida-citrica-40135688/)
 
 ## Licença
 
