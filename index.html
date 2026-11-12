@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FoodFinder: descubra receitas, explore sabores e encontre inspiração para sua próxima refeição.">
+    <title>FoodFinder | Descubra novos sabores</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    FoodFinder
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Abrir menu de navegação"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#fim">Fim</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="https://github.com/yNeop/FoodFinder">
+                                GitHub<img src="assets/icons/github.png" alt="github_logo">
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Apresentação -->
+        <section id="hero">
+            <div class="container">
+
+                <h1>Descubra sua próxima receita favorita.</h1>
+
+                <p>
+                    Explore novos sabores, encontre receitas
+                    e descubra o que preparar hoje.
+                </p>
+
+                <a href="pages/explore.html" class="btn btn-primary">Explorar receitas</a>
+
+            </div>
+        </section>
+
+        <!-- Categorias e destaques -->
+        <section id="highlights">
+            <div class="container">
+
+                <h2>Explore novos sabores</h2>
+
+                <p>
+                    Descubra diferentes pratos e encontre
+                    inspiração para sua próxima refeição.
+                </p>
+
+                <!-- Carrossel de destaques -->
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="fim">
+        <div class="container text-center">
+
+            <p>&copy; 2026 FoodFinder. Todos os direitos reservados.</p>
+
+            <p>Desenvolvido com HTML, CSS, JavaScript, Bootstrap 5 e TheMealDB API.</p>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
